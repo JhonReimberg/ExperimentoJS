@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" href="/aula 04/imagens/download.jfif">
+
+    <title>JAVASCRIPT</title>
+</head>
+
+<body class="corpo">
+    <h1 class="corpo-titulo" title="Titulo da página">TESTE DE JAVASCRIPT</h1>
+    <p class="corpo-titulo-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Officia numquam magnam
+        voluptatum?
+        Dolore harum
+        voluptatum fugiat corporis, quaerat tenetur! Nulla dignissimos consectetur repudiandae repellendus
+        minus tenetur
+        possimus aut eligendi dolore.
+    </p>
+
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Impedit repellat delectus id nisi a quisquam itaque dolorem eius necessitatibus laborum! Minima in magnam, nesciunt nobis quibusdam provident veniam iste expedita?</p>
+
+    <p id="paragrafo"></p>
+    <script>
+        window.confirm("Vamos precisar de algumas informações para elaborar o cálculo");
+        var nome = window.prompt("Escreva o seu Nome ! ");
+        var idade = (window.prompt("digite sua idade"));
+        var idade2 = (window.prompt("digite a idade da do seu amigo"));
+        var comparIdade = Math.abs(idade - idade2);
+
+        function textoIdade() {
+            if (idade < idade2) {
+                window.alert(`${nome}, você é ${comparIdade} anos mais novo que o seu amigo`)
+
+            }
+            else if (idade == idade2) {
+                window.alert(`${nome}, você tem a mesma idade que o seu amigo`)
+            }
+            else {
+                window.alert(`${nome}, você é ${comparIdade} anos mais velho que o seu amigo`)
+
+            }
+
+
+        }
+
+        textoIdade();
+
+        window.alert(`E a sua idade tem ${idade.length} algarismos.`);
+
+        function teste() {
+
+            if (idade >= 18) {
+
+                document.getElementById("paragrafo").innerHTML = `${nome},você é maior de idade`;
+
+            }
+
+            else {
+                document.getElementById("paragrafo").innerHTML = `${nome},você é menor de idade`;
+            }
+
+
+        }
+
+        teste();
+
+
+    </script>
+</body>
+
+</html>
