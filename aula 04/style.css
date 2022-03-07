@@ -47,9 +47,18 @@ body input[type=text]{
     border-radius: 20px;    
     padding-left: 10px;
     border-color: #e46efcb4;
-    color:#e46efcb4;
+   
     
 }
+
+body input[type=number]{
+    border-radius: 20px;    
+    padding-left: 10px;
+    border-color: #e46efcb4;
+    
+    
+}
+
 
 .botao{
     width: 200px;

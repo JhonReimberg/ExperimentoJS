@@ -13,10 +13,13 @@
 
 <body class="corpo">
     <h1 class="corpo-titulo" title="Titulo da página">TESTE DE JAVASCRIPT</h1>
-    <input id="caixa nome" type="text" name="sua idade" placeholder="Digite seu nome">
-    <input id="sua idade" type="text" name="sua idade" placeholder="Digite a sua idade">
-    <input id="idade amigo" type="text" name="idade amigo" placeholder="Digite a idade do seu amigo">
-    <button id="botaoverificar" class="botao" type="submit">Verificar</button>
+    <input id="caixaNome" type="text" name="seu nome" placeholder="Digite seu nome">
+    <input id="suaIdade" type="number" name="sua idade" placeholder="Digite a sua idade">
+    <input id="idadeAmigo" type="number" name="idade amigo" placeholder="Digite a idade do seu amigo">
+    <button id="botaoVerificar" value="resultado" onclick="resultado()" class="botao" type="button">Verificar</button>
+
+    <div id="calcular"></div>
+    <div id="calcular2"></div>
 
 
 
@@ -29,11 +32,51 @@
         dolorem eius necessitatibus laborum! Minima in magnam, nesciunt nobis quibusdam provident veniam iste expedita?
     </p>
 
-    <script src="formula.js"></script>
 
 
     <script>
-        /*window.confirm("Vamos precisar de algumas informações para elaborar o cálculo");
+
+
+
+        function resultado() {
+
+            var nome = window.document.getElementById('caixaNome');
+            var idade = window.document.getElementById('suaIdade');
+            var idade2 = window.document.getElementById('idadeAmigo');
+            var calcular = window.document.getElementById('calcular');
+            var calcular2 = window.document.getElementById('calcular2');
+            var pegaValorIdade = Number(idade.value);
+            var pegaValorIdade2 = Number(idade2.value);
+            var pegaNome = (nome.value);
+            var soma2 = Math.abs(pegaValorIdade - pegaValorIdade2);
+
+            calcular.innerHTML = (`${pegaNome}, você tem ${pegaValorIdade} anos de idade.`);
+
+            if (pegaValorIdade < pegaValorIdade2) {
+                calcular2.innerHTML = (`E você é ${soma2} anos mais novo que o seu amigo.`)
+
+            }
+            else if (pegaValorIdade == pegaValorIdade2) {
+                calcular2.innerHTML = ("E você tem a mesma idade que o seu amigo.")
+            }
+            else {
+                calcular2.innerHTML = (`E você é ${soma2} anos mais velho que o seu amigo.`)
+
+
+            }
+
+        }
+
+
+
+
+
+
+    </script>
+
+
+    <script>
+        /* window.confirm("Vamos precisar de algumas informações para elaborar o cálculo");
         var nome = window.prompt("Escreva o seu Nome ! ");
         var idade = (window.prompt("digite sua idade"));
         var idade2 = (window.prompt("digite a idade da do seu amigo"));
