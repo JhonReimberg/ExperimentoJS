@@ -68,7 +68,8 @@ body input[type=number]{
     border-radius: 6px;
     background-color: #eb71d600;
     font-size: 18px;
-    margin-top: 10px;
+    margin-top: 25px;
+    margin-bottom: 35px;
     margin-right: -10px;   
     color: #eee;
     transition: 0.7s;
