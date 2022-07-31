@@ -34,6 +34,7 @@ function resultado() {
     
 }
 function nomeEmBranco(){
-    if(idade = "" ) window.alert("INSIRA OS DADOS CORRETAMENTE");{
+    if(idade = "" ); {
+        window.alert("INSIRA OS DADOS CORRETAMENTE")
     }
     }
