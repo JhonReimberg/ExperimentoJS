@@ -1,3 +1,4 @@
+ function resultado() {
     var nome = window.document.getElementById('caixaNome');
     var idade = window.document.getElementById('suaIdade');
     var idade2 = window.document.getElementById('idadeAmigo');
@@ -7,16 +8,18 @@
     var pegaValorIdade2 = Number(idade2.value);
     var pegaNome = (nome.value);
     var soma2 = Math.abs(pegaValorIdade - pegaValorIdade2);
-
-
-
-function resultado() {
-
     
 
     calcular.innerHTML = (`${pegaNome}, você tem ${pegaValorIdade} anos de idade.`);
+    
+    if (pegaNome && pegaValorIdade && pegaValorIdade2== ""){
+        Text= "NAO DEIXE INFOMAÇÃO EM BRANCO !!!! ";
+        alert(Text);s
+    }
 
-    if (pegaValorIdade < pegaValorIdade2) {
+
+
+    else if (pegaValorIdade < pegaValorIdade2) {
         calcular2.innerHTML = (`E você é ${soma2} anos mais novo que o seu amigo.`)
 
     }
@@ -25,11 +28,11 @@ function resultado() {
 
     
     }
-    
+
     else {
         calcular2.innerHTML = (`E você é ${soma2} anos mais velho que o seu amigo.`)
 
 
     }
     
-}
+};
